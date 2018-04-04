@@ -1,0 +1,47 @@
+  $(document).on("click",". ",function(){
+    $(". ").prop( "disabled",true)
+      var url=" ";
+          $.ajax({
+              type:"POST",
+              url:url,
+              data:$(".form_apartado").serialize(),
+              success:function(data){
+                  $(".mensaje_").html(data); 
+                  $(". ").prop( "disabled",false)    
+                
+              }
+          });
+          return false;
+    
+  })
+  $(document).on("click",".limpiar",function(event){
+    $("# ").val("")
+    $("# ").focus()
+  })
+
+
+<?php  
+  include("funciones.php");
+  #variables
+
+  if ( != '') {
+     
+
+      $consulta_val = consulta_val("");
+      if ( == 0) {
+          $insertar = consulta_gen("");
+      }
+      else{
+          echo "Registro ya hecho con anterioridad";
+      }
+  }
+  else{
+      echo "Campo vacio en el formulario";
+  }
+
+
+?>
+
+
+
+$(".btn-close").trigger("click")
